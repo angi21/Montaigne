@@ -1,0 +1,57 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+section{
+    padding: 30px;
+    background-color: #313132;
+}
+#main-head{
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    background-attachment: fixed;
+    background-color: #21A339;
+    text-transform: uppercase;
+}
+#div-btn{
+    align-content: center;
+}
+#cmpbtn{
+    margin: 10px;
+}
+label{
+    color: antiquewhite;
+    margin: 10px;
+    padding-right: 10px;
+}
+table {
+            border-collapse: collapse;
+            border: 2px black solid;
+            font: 12px sans-serif;
+            height: 300px;
+            display: block;
+            overflow: auto;
+        }
+ th,td {
+            border: 1px black solid;
+            padding: 5px;
+        }
+
+#chartContainer{
+            height: 400px;
+            width: 50%;
+            padding: 25px;
+        }
+#demo{
+            padding-top: 50px;
+            color: antiquewhite;
+        }
+.main-footer{
+  min-height: 50px;
+  text-align: center;
+  background-color: #21A339;
+  font-size: 19px;
+  color: aliceblue;
+  padding: 20px 20px;
+}
