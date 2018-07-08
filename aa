@@ -1,0 +1,26 @@
+
+Callbacks are pretty simple and nifty! Because of the nature of AJAX calls, you don't block execution of your script till your request is over (it would be synchronous then). A callback is simply a method designated to handle the response once it gets back to your method.
+
+Since javascript methods are first class objects, you can pass them around like variables.
+
+So in your example
+
+getText = function(url, callback) // How can I use this callback?
+{
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function()
+    {
+        if (request.readyState == 4 && request.status == 200)
+        {
+            callback(request.responseText); // Another callback here
+        }
+    }; 
+    request.open('GET', url);
+    request.send();
+}
+
+function mycallback(data) {
+   alert(data);
+}
+
+getText('somephpfile.php', mycallback); //passing mycallback as a method

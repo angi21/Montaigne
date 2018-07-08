@@ -1,3 +1,4 @@
+//Table Comparison
 
 var btn = document.getElementById('cmpbtn');
 var menu = document.getElementById('fileselect');
@@ -28,16 +29,18 @@ var getText = function(url, cFunction) {
     xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
-            cFunction(this);
+            cFunction(this); //Invoking callback function
         }
     };
     xhttp.open("GET", url, true);
     xhttp.send();
 }
+
+// CAllback function definition
+
 function myFunction(xhttp) {
     var res = JSON.parse(xhttp.responseText); 
     var row = res.report.table.row;
-   
     
    var  xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
@@ -46,8 +49,14 @@ function myFunction(xhttp) {
                 var row1 = res1.report.table.row;
             //     console.log(row);
             // console.log(row1);
-            var txt = "<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\"><tr><th>Ad Group</th><th>Default max.CPC</th><th>Clicks</th><th>Impressions</th><th>CTR</th><th>Avg. CPC</th><th>Cost</th><th>Avg. position</th><th>Conversions</th><th>Cost / conv.</th><th>Conv. rate</th><th>Search Impr. share</th><th>Search Exact match IS</th><th>Campaign state</th><th>AdGroup state</th></tr><tbody>";
-            if(menu.value == 'day1')
+            var txt = "<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\"><tr><th>Ad Group</th>"
+            +"<th>Default max.CPC</th><th>Clicks</th><th>Impressions</th><th>CTR</th><th>Avg. CPC</th><th>Cost</th>"
+            +"<th>Avg. position</th><th>Conversions</th><th>Cost / conv.</th><th>Conv. rate</th><th>Search Impr. share</th>"
+            +"<th>Search Exact match IS</th><th>Campaign state</th><th>AdGroup state</th></tr><tbody>";
+
+            //If day 1 is selected
+            if(menu.value == 'day1'){
+    
                     for (var i = 0; i < row.length; i++) {
 
                         txt += '<tr>';
@@ -110,7 +119,10 @@ function myFunction(xhttp) {
 
                         
                     }
-                else if(menu.value == 'day2')
+            }
+
+            //If Day 2 is selected
+                else if(menu.value == 'day2'){
                     for (var i = 0; i < row1.length; i++) {
 
                         txt += '<tr>';
@@ -173,20 +185,23 @@ function myFunction(xhttp) {
 
 
                     }
+            }
 
             txt += "</tbody></table>";
             document.getElementById('demo').innerHTML=txt;
-        }
+            }
+        
     };
-    if(menu.value == 'day1')
-        xmlhttp.open("GET","../day2.json", true);
-    else if(menu.value == 'day2'){
-        xmlhttp.open("GET", "../day1.json", true);
-    }
-    xmlhttp.send();
+        //Get JSON data based on callback function 
+        if(menu.value == 'day1') 
+            xmlhttp.open("GET","../day2.json", true);
+        else if(menu.value == 'day2'){
+            xmlhttp.open("GET", "../day1.json", true);
+        }
+        xmlhttp.send();
 }
-console.log(menu.value);
+    console.log(menu.value);
 
-getText('../'+menu.value+'.json',myFunction);
+    getText('../'+menu.value+'.json',myFunction);
 
 }

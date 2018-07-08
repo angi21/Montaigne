@@ -35,7 +35,10 @@ window.onload = function(){
             }
             chart.render();
 
-            var txt = "<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\"><tr><th>Ad Group</th><th>Default max.CPC</th><th>Clicks</th><th>Impressions</th><th>CTR</th><th>Avg. CPC</th><th>Cost</th><th>Avg. position</th><th>Conversions</th><th>Cost / conv.</th><th>Conv. rate</th><th>Search Impr. share</th><th>Search Exact match IS</th><th>Campaign state</th><th>AdGroup state</th></tr><tbody>";
+            var txt = "<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\"><tr><th>Ad Group</th>"
+            +"<th>Default max.CPC</th><th>Clicks</th><th>Impressions</th><th>CTR</th><th>Avg. CPC</th>"
+            +"<th>Cost</th><th>Avg. position</th><th>Conversions</th><th>Cost / conv.</th><th>Conv. rate</th>"
+            +"<th>Search Impr. share</th><th>Search Exact match IS</th><th>Campaign state</th><th>AdGroup state</th></tr><tbody>";
             for (var i = 0; i < row.length; i++) {
 
                 txt += '<tr>';
@@ -90,7 +93,7 @@ function gendata(e){
                 dataPoints: dataPoints,
             }]
         });
-        var xhttp = new XMLHttpRequest();
+        var xhttp = new XMLHttpRequest(); //Creating AJAX request
         xhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200 && this.status != 304) {
                 var res = JSON.parse(xhttp.responseText);
@@ -102,7 +105,10 @@ function gendata(e){
                 }
                 chart.render();
 
-                var txt = "<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\"><tr><th>Ad Group</th><th>Default max.CPC</th><th>Clicks</th><th>Impressions</th><th>CTR</th><th>Avg. CPC</th><th>Cost</th><th>Avg. position</th><th>Conversions</th><th>Cost / conv.</th><th>Conv. rate</th><th>Search Impr. share</th><th>Search Exact match IS</th><th>Campaign state</th><th>AdGroup state</th></tr><tbody>";
+                var txt = "<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\"><tr><th>Ad Group</th>"
+                +"<th>Default max.CPC</th><th>Clicks</th><th>Impressions</th><th>CTR</th><th>Avg. CPC</th>"
+                +"<th>Cost</th><th>Avg. position</th><th>Conversions</th><th>Cost / conv.</th><th>Conv. rate</th>"
+                +"<th>Search Impr. share</th><th>Search Exact match IS</th><th>Campaign state</th><th>AdGroup state</th></tr><tbody>";
                 for (var i = 0; i < row.length; i++) {
 
                     txt += '<tr>';
@@ -172,7 +178,10 @@ function gendata(e){
                 }
                 chart.render();
 
-                var txt = "<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\"><tr><th>Ad Group</th><th>Default max.CPC</th><th>Clicks</th><th>Impressions</th><th>CTR</th><th>Avg. CPC</th><th>Cost</th><th>Avg. position</th><th>Conversions</th><th>Cost / conv.</th><th>Conv. rate</th><th>Search Impr. share</th><th>Search Exact match IS</th><th>Campaign state</th><th>AdGroup state</th></tr><tbody>";
+                var txt = "<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\"><tr><th>Ad Group</th>"
+                +"<th>Default max.CPC</th><th>Clicks</th><th>Impressions</th><th>CTR</th><th>Avg. CPC</th>"
+                +"<th>Cost</th><th>Avg. position</th><th>Conversions</th><th>Cost / conv.</th><th>Conv. rate</th>"
+                +"<th>Search Impr. share</th><th>Search Exact match IS</th><th>Campaign state</th><th>AdGroup state</th></tr><tbody>";
                 for (var i = 0; i < row.length; i++) {
 
                     txt += '<tr>';
