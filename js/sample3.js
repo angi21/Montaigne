@@ -60,61 +60,61 @@ function myFunction(xhttp) {
                     for (var i = 0; i < row.length; i++) {
 
                         txt += '<tr>';
-                        txt += '<td>' + row1[i]._adGroup + '</td>';
-                        if (parseInt(row1[i]._defaultMaxCPC) > parseInt(row[i]._defaultMaxCPC))
-                            txt += '<td bgcolor="green">' + row1[i]._defaultMaxCPC + '</td>';
+                        txt += '<td>' + row[i]._adGroup + '</td>';
+                        if (parseInt(row1[i]._defaultMaxCPC) < parseInt(row[i]._defaultMaxCPC))
+                            txt += '<td bgcolor="green">' + row[i]._defaultMaxCPC + '</td>';
                         else
-                            txt += '<td bgcolor="red">' + row1[i]._defaultMaxCPC + '</td>';
-                        if (parseInt(row1[i]._clicks) > parseInt(row[i]._clicks))
+                            txt += '<td bgcolor="red">' + row[i]._defaultMaxCPC + '</td>';
+                        if (parseInt(row1[i]._clicks) < parseInt(row[i]._clicks))
                             txt += '<td bgcolor="green">' + row1[i]._clicks + '</td>';
                         else
-                            txt += '<td bgcolor="red">' + row1[i]._clicks + '</td>';
-                        if (parseInt(row1[i]._impressions) > parseInt(row[i]._impressions))
-                            txt += '<td bgcolor="green">' + row1[i]._impressions + '</td>';
+                            txt += '<td bgcolor="red">' + row[i]._clicks + '</td>';
+                        if (parseInt(row1[i]._impressions) < parseInt(row[i]._impressions))
+                            txt += '<td bgcolor="green">' + row[i]._impressions + '</td>';
                         else
-                            txt += '<td bgcolor="red">' + row1[i]._impressions + '</td>';
-                        if (parseInt(row1[i]._ctr) > parseInt(row[i]._ctr))
-                            txt += '<td bgcolor="green">' + row1[i]._ctr + '</td>';
+                            txt += '<td bgcolor="red">' + row[i]._impressions + '</td>';
+                        if (parseInt(row1[i]._ctr) < parseInt(row[i]._ctr))
+                            txt += '<td bgcolor="green">' + row[i]._ctr + '</td>';
                         else
-                            txt += '<td bgcolor="red">' + row1[i]._ctr + '</td>';
-                        if (parseInt(row1[i]._avgCPC) > parseInt(row[i]._avgCPC))
-                            txt += '<td bgcolor="green">' + row1[i]._avgCPC + '</td>';
+                            txt += '<td bgcolor="red">' + row[i]._ctr + '</td>';
+                        if (parseInt(row1[i]._avgCPC) < parseInt(row[i]._avgCPC))
+                            txt += '<td bgcolor="green">' + row[i]._avgCPC + '</td>';
                         else
-                            txt += '<td bgcolor="red">' + row1[i]._avgCPC + '</td>';
+                            txt += '<td bgcolor="red">' + row[i]._avgCPC + '</td>';
                         if (parseInt(row1[i]._cost) > parseInt(row[i]._cost))
-                            txt += '<td bgcolor="green">' + row1[i]._cost + '</td>';
+                            txt += '<td bgcolor="green">' + row[i]._cost + '</td>';
                         else
-                            txt += '<td bgcolor="red">' + row1[i]._cost + '</td>';
-                        if (parseInt(row1[i]._avgPosition) > parseInt(row[i]._avgPosition))
-                            txt += '<td bgcolor="green">' + row1[i]._avgPosition + '</td>';
+                            txt += '<td bgcolor="red">' + row[i]._cost + '</td>';
+                        if (parseInt(row1[i]._avgPosition) < parseInt(row[i]._avgPosition))
+                            txt += '<td bgcolor="green">' + row[i]._avgPosition + '</td>';
                         else
-                            txt += '<td bgcolor="red">' + row1[i]._avgPosition + '</td>';
-                        if (parseInt(row1[i]._conversions) > parseInt(row[i]._conversions))
+                            txt += '<td bgcolor="red">' + row[i]._avgPosition + '</td>';
+                        if (parseInt(row1[i]._conversions) < parseInt(row[i]._conversions))
                             txt += '<td bgcolor="green">' + row1[i]._conversions + '</td>';
                         else
-                            txt += '<td bgcolor="red">' + row1[i]._conversions + '</td>';
-                        if (parseInt(row1[i]._costConv) > parseInt(row[i]._costConv))
-                            txt += '<td bgcolor="green">' + row1[i]._costConv + '</td>';
+                            txt += '<td bgcolor="red">' + row[i]._conversions + '</td>';
+                        if (parseInt(row1[i]._costConv) < parseInt(row[i]._costConv))
+                            txt += '<td bgcolor="green">' + row[i]._costConv + '</td>';
                         else
-                            txt += '<td bgcolor="red">' + row1[i]._costConv + '</td>';
-                        if (parseInt(row1[i]._costConv) > parseInt(row[i]._costConv))
-                            txt += '<td bgcolor="green">' + row1[i]._costConv + '</td>';
+                            txt += '<td bgcolor="red">' + row[i]._costConv + '</td>';
+                        if (parseInt(row1[i]._costConv) < parseInt(row[i]._costConv))
+                            txt += '<td bgcolor="green">' + row[i]._costConv + '</td>';
                         else
-                            txt += '<td bgcolor="red">' + row1[i]._convRate + '</td>';
-                        if ((row1[i]._searchImprShare) > (row[i]._searchImprShare))
-                            txt += '<td bgcolor="green">' + row1[i]._searchImprShare + '</td>';
-                        else if ((row1[i]._searchImprShare) < (row[i]._searchImprShare))
-                            txt += '<td bgcolor="red">' + row1[i]._searchImprShare + '</td>'; 
+                            txt += '<td bgcolor="red">' + row[i]._convRate + '</td>';
+                        if ((row1[i]._searchImprShare) < (row[i]._searchImprShare))
+                            txt += '<td bgcolor="green">' + row[i]._searchImprShare + '</td>';
+                        else if ((row1[i]._searchImprShare) > (row[i]._searchImprShare))
+                            txt += '<td bgcolor="red">' + row[i]._searchImprShare + '</td>'; 
                         else
-                            txt += '<td>' + row1[i]._searchImprShare + '</td>'; 
-                        if (row1[i]._searchExactMatchIS > row[i]._searchExactMatchIS)
-                            txt += '<td bgcolor="green">' + row1[i]._searchExactMatchIS + '</td>';
-                        else if (row1[i]._searchExactMatchIS < row[i]._searchExactMatchIS)
-                            txt += '<td bgcolor="red">' + row1[i]._searchExactMatchIS + '</td>';
+                            txt += '<td>' + row[i]._searchImprShare + '</td>'; 
+                        if (row1[i]._searchExactMatchIS < row[i]._searchExactMatchIS)
+                            txt += '<td bgcolor="green">' + row[i]._searchExactMatchIS + '</td>';
+                        else if (row1[i]._searchExactMatchIS > row[i]._searchExactMatchIS)
+                            txt += '<td bgcolor="red">' + row[i]._searchExactMatchIS + '</td>';
                         else
-                            txt += '<td>' + row1[i]._searchExactMatchIS + '</td>';
-                        txt += '<td>' + row1[i]._campaignState + '</td>';
-                        txt += '<td>' + row1[i]._adGroupState + '</td>';
+                            txt += '<td>' + row[i]._searchExactMatchIS + '</td>';
+                        txt += '<td>' + row[i]._campaignState + '</td>';
+                        txt += '<td>' + row[i]._adGroupState + '</td>';
                         txt += '</tr>';
 
                         
@@ -126,61 +126,61 @@ function myFunction(xhttp) {
                     for (var i = 0; i < row1.length; i++) {
 
                         txt += '<tr>';
-                        txt += '<td>' + row1[i]._adGroup + '</td>';
-                        if (parseInt(row1[i]._defaultMaxCPC) > parseInt(row[i]._defaultMaxCPC))
-                            txt += '<td bgcolor="green">' + row1[i]._defaultMaxCPC + '</td>';
+                        txt += '<td>' + row[i]._adGroup + '</td>';
+                        if (parseInt(row1[i]._defaultMaxCPC) < parseInt(row[i]._defaultMaxCPC))
+                            txt += '<td bgcolor="green">' + row[i]._defaultMaxCPC + '</td>';
                         else
-                            txt += '<td bgcolor="red">' + row1[i]._defaultMaxCPC + '</td>';
-                        if (parseInt(row1[i]._clicks) > parseInt(row[i]._clicks))
-                            txt += '<td bgcolor="green">' + row1[i]._clicks + '</td>';
+                            txt += '<td bgcolor="red">' + row[i]._defaultMaxCPC + '</td>';
+                        if (parseInt(row1[i]._clicks) < parseInt(row[i]._clicks))
+                            txt += '<td bgcolor="green">' + row[i]._clicks + '</td>';
                         else
-                            txt += '<td bgcolor="red">' + row1[i]._clicks + '</td>';
-                        if (parseInt(row1[i]._impressions) > parseInt(row[i]._impressions))
-                            txt += '<td bgcolor="green">' + row1[i]._impressions + '</td>';
+                            txt += '<td bgcolor="red">' + row[i]._clicks + '</td>';
+                        if (parseInt(row1[i]._impressions) < parseInt(row[i]._impressions))
+                            txt += '<td bgcolor="green">' + row[i]._impressions + '</td>';
                         else
-                            txt += '<td bgcolor="red">' + row1[i]._impressions + '</td>';
-                        if (parseInt(row1[i]._ctr) > parseInt(row[i]._ctr))
-                            txt += '<td bgcolor="green">' + row1[i]._ctr + '</td>';
+                            txt += '<td bgcolor="red">' + row[i]._impressions + '</td>';
+                        if (parseInt(row1[i]._ctr) < parseInt(row[i]._ctr))
+                            txt += '<td bgcolor="green">' + row[i]._ctr + '</td>';
                         else
-                            txt += '<td bgcolor="red">' + row1[i]._ctr + '</td>';
-                        if (parseInt(row1[i]._avgCPC) > parseInt(row[i]._avgCPC))
-                            txt += '<td bgcolor="green">' + row1[i]._avgCPC + '</td>';
+                            txt += '<td bgcolor="red">' + row[i]._ctr + '</td>';
+                        if (parseInt(row1[i]._avgCPC) < parseInt(row[i]._avgCPC))
+                            txt += '<td bgcolor="green">' + row[i]._avgCPC + '</td>';
                         else
-                            txt += '<td bgcolor="red">' + row1[i]._avgCPC + '</td>';
-                        if (parseInt(row1[i]._cost) > parseInt(row[i]._cost))
-                            txt += '<td bgcolor="green">' + row1[i]._cost + '</td>';
+                            txt += '<td bgcolor="red">' + row[i]._avgCPC + '</td>';
+                        if (parseInt(row1[i]._cost) < parseInt(row[i]._cost))
+                            txt += '<td bgcolor="green">' + row[i]._cost + '</td>';
                         else
-                            txt += '<td bgcolor="red">' + row1[i]._cost + '</td>';
-                        if (parseInt(row1[i]._avgPosition) > parseInt(row[i]._avgPosition))
-                            txt += '<td bgcolor="green">' + row1[i]._avgPosition + '</td>';
+                            txt += '<td bgcolor="red">' + row[i]._cost + '</td>';
+                        if (parseInt(row1[i]._avgPosition) < parseInt(row[i]._avgPosition))
+                            txt += '<td bgcolor="green">' + row[i]._avgPosition + '</td>';
                         else
-                            txt += '<td bgcolor="red">' + row1[i]._avgPosition + '</td>';
-                        if (parseInt(row1[i]._conversions) > parseInt(row[i]._conversions))
-                            txt += '<td bgcolor="green">' + row1[i]._conversions + '</td>';
+                            txt += '<td bgcolor="red">' + row[i]._avgPosition + '</td>';
+                        if (parseInt(row1[i]._conversions) < parseInt(row[i]._conversions))
+                            txt += '<td bgcolor="green">' + row[i]._conversions + '</td>';
                         else
-                            txt += '<td bgcolor="red">' + row1[i]._conversions + '</td>';
-                        if (parseInt(row1[i]._costConv) > parseInt(row[i]._costConv))
-                            txt += '<td bgcolor="green">' + row1[i]._costConv + '</td>';
+                            txt += '<td bgcolor="red">' + row[i]._conversions + '</td>';
+                        if (parseInt(row1[i]._costConv) < parseInt(row[i]._costConv))
+                            txt += '<td bgcolor="green">' + row[i]._costConv + '</td>';
                         else
-                            txt += '<td bgcolor="red">' + row1[i]._costConv + '</td>';
-                        if (parseInt(row1[i]._costConv) > parseInt(row[i]._costConv))
-                            txt += '<td bgcolor="green">' + row1[i]._costConv + '</td>';
+                            txt += '<td bgcolor="red">' + row[i]._costConv + '</td>';
+                        if (parseInt(row1[i]._costConv) < parseInt(row[i]._costConv))
+                            txt += '<td bgcolor="green">' + row[i]._costConv + '</td>';
                         else
-                            txt += '<td bgcolor="red">' + row1[i]._convRate + '</td>';
-                        if ((row1[i]._searchImprShare) > (row[i]._searchImprShare))
-                            txt += '<td bgcolor="green">' + row1[i]._searchImprShare + '</td>';
-                        else if ((row1[i]._searchImprShare) < (row[i]._searchImprShare))
-                            txt += '<td bgcolor="red">' + row1[i]._searchImprShare + '</td>';
+                            txt += '<td bgcolor="red">' + row[i]._convRate + '</td>';
+                        if ((row1[i]._searchImprShare) < (row[i]._searchImprShare))
+                            txt += '<td bgcolor="green">' + row[i]._searchImprShare + '</td>';
+                        else if ((row1[i]._searchImprShare) > (row[i]._searchImprShare))
+                            txt += '<td bgcolor="red">' + row[i]._searchImprShare + '</td>';
                         else
-                            txt += '<td>' + row1[i]._searchImprShare + '</td>';
-                        if (row1[i]._searchExactMatchIS > row[i]._searchExactMatchIS)
-                            txt += '<td bgcolor="green">' + row1[i]._searchExactMatchIS + '</td>';
-                        else if (row1[i]._searchExactMatchIS < row[i]._searchExactMatchIS)
-                            txt += '<td bgcolor="red">' + row1[i]._searchExactMatchIS + '</td>';
+                            txt += '<td>' + row[i]._searchImprShare + '</td>';
+                        if (row1[i]._searchExactMatchIS < row[i]._searchExactMatchIS)
+                            txt += '<td bgcolor="green">' + row[i]._searchExactMatchIS + '</td>';
+                        else if (row1[i]._searchExactMatchIS > row[i]._searchExactMatchIS)
+                            txt += '<td bgcolor="red">' + row[i]._searchExactMatchIS + '</td>';
                         else
-                            txt += '<td>' + row1[i]._searchExactMatchIS + '</td>';
-                        txt += '<td>' + row1[i]._campaignState + '</td>';
-                        txt += '<td>' + row1[i]._adGroupState + '</td>';
+                            txt += '<td>' + row[i]._searchExactMatchIS + '</td>';
+                        txt += '<td>' + row[i]._campaignState + '</td>';
+                        txt += '<td>' + row[i]._adGroupState + '</td>';
                         txt += '</tr>';
 
 
@@ -193,9 +193,14 @@ function myFunction(xhttp) {
         
     };
         //Get JSON data based on callback function 
-        if(menu.value == 'day1') 
+        if(menu.value == 'day1')  {
+            console.log(menu.value);
+            
             xmlhttp.open("GET","../day2.json", true);
+        }
+            
         else if(menu.value == 'day2'){
+            console.log(menu.value);
             xmlhttp.open("GET", "../day1.json", true);
         }
         xmlhttp.send();
