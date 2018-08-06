@@ -1,5 +1,5 @@
 // var getd = document.getElementById('fileselect');
-// getd.addEventListener('change',getdata);1
+// getd.addEventListener('change',getdata);
 
 var menu = document.getElementById('fileselect');
 window.onload = function(){
